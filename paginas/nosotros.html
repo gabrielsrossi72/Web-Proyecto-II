@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Renzo Lacovara" />
+    <meta
+      name="description"
+      content="Conozca un poco mas la historia y el staff de Oishii Ramen Shop, el pedazito de Japon en Buenos Aires"
+    />
+    <meta
+      name="keywords"
+      content="ramen, oishii, ramenshop, japon, comida japonesa, japanese food, onigiri, cocina, delivery, comida, buenos aires, gastronomia"
+    />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css@v1.7/symbiosis.min.css"
+    />
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="shortcut icon" href="../iconos/logo.png" type="image/x-icon" />
+    <title>Oishii Ramen</title>
+  </head>
+  <body>
+    <script>
+      const selectedTheme = localStorage.getItem('theme')
+      document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove']("oscuro")
+         </script>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top header__nav" id="navbar">
+        <a
+          href="../index.html"
+          name="inicio"
+          class="header__nav__inicio navbar-brand"
+        ></a>
+        <button class="hamburger hamburger--spin navbtn" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <div class="uldiv">
+                  <ul class="header__nav__list">
+                    <li class="header__nav__list__item">
+                      <a href="../index.html" class="pagina"
+                        >Inicio <i class="fa-solid fa-house"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/menu.html" class="pagina"
+                        >Menú <i class="fa-solid fa-utensils"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/ubicacion.html" class="pagina"
+                        >Ubicación <i class="fa-solid fa-map-location-dot"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/nosotros.html" class="pagina"
+                        >Nosotros <i class="fa-solid fa-people-group"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/unite.html" class="pagina"
+                        >Sumate! <i class="fa-solid fa-handshake-simple"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <div class="toggle-btn btn-toggle" id="_1st-toggle-btn">
+                        <input id="mode" type="checkbox" onclick="cambiarModo()">
+                        <span></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container__somos--d">
+        <div class="container__somos">
+          <h1
+            class="container__somos__h1"
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+          >
+            Somos Oishii Ramen
+          </h1>
+        </div>
+      </div>
+      <div class="container__comienzo">
+        <p class="container__p" id="p1">
+          Oishii Ramen comenzó como un pequeño emprendimiento en 2013.<br />
+          Cocinabamos mayoritariamente para amigos y familia, hasta poco a poco
+          ir ganando un lugarcito en el corazón de más personas interesadas en
+          viajar con el sabor.<br />
+          Gracias a mucho apoyo y esfuerzo logramos noche a noche ir
+          construyendo nuestro espacio soñado y crecer, enfocandonos
+          incansablemente en brindar una experiencia 100% japonesa para nuestros
+          clientes, con nuestros cocineros trabajando duro en conseguir los
+          mejores ingredientes locales para poder recrear y refinar las recetas
+          originales.<br />
+        </p>
+        <p class="container__p2" id="p2">
+          Este negocio se convirtió en el lugar donde todos son bienvenidos a
+          desconectarse, con un ambiente amable y tradicional que te invita a
+          soñar, buscando que cada visita sea inolvidable. <br />
+          Hoy ya estamos considerando abrir un segundo restaurante y no podemos
+          estar mas agradecidos, con los que estuvieron en un principio y con
+          los que vendran.<br />
+          Nada de esto hubiese sido posible sin el esfuerzo de nuestros
+          integrantes, las mejores personas con las que se puede trabajar y en
+          todos los que confiaron en nosotros, ahora y siempre...
+        </p>
+        <h2 class="container__arigato">Hontoni arigato gozaimasu!</h2>
+        <img
+        id="myImg"
+          class="img1 nos"
+          src="../imagenes/nosotros7.jpg"
+          alt="staff de oishii"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+       
+        />
+        <img
+        id="myImg2"
+          class="img2 nos"
+          src="../imagenes/nosotros3.jpg"
+          alt="staff de oishii"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+                  />
+        <img
+        id="myImg3"
+          class="img3 nos"
+          src="../imagenes/nosotros9.jpg"
+          alt="staff de oishii"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+      
+        />
+        <img
+        id="myImg4"
+          class="img4 nos"
+          src="../imagenes/nosotros5.jpg"
+          alt="staff de oishii"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+      
+        />
+        <img
+        id="myImg5"
+          class="img5 nos"
+          src="../imagenes/nosotros8.jpg"
+          
+          alt="staff de oishii"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        />
+      </div>
+      <div id="miModal" class="modal">
+        <img class="modal-content" id="modalzoom" onclick="cerrarimg()">
+      </div>
+      <div class="container__enlacefinal">
+        <a class="container__enlacefinal__a" href="unite.html"
+          >Forma parte de esta familia!</a
+        >
+      </div>
+    </main>
+    <footer>
+      <div class="footer__copyright">
+        <p>© 2023 おいしい Oishii Ramen</p>
+      </div>
+      <div class="footer__social">
+        <a href="https://web.whatsapp.com/" name="whatsapp" target="_blank"
+          ><i class="fa-brands fa-whatsapp wpico"></i
+        ></a>
+        <a href="https://instagram.com/" name="instagram" target="_blank"
+          ><i class="fa-brands fa-instagram igico"></i></a>
+          <a href="https://facebook.com/" name="facebook" target="_blank"
+          ><i class="fa-brands fa-facebook-f fbico"></i></a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Santiago Gabriel Rossi" />
+    <meta
+      name="description"
+      content="Conozca todos nuestros platos, entradas y recetas cuyos ingredientes estan calculados a la medida exacta para su maximo sabor"
+    />
+    <meta
+      name="keywords"
+      content="ramen, oishii, ramenshop, japon, comida japonesa, japanese food, onigiri, cocina, delivery, comida, buenos aires, gastronomia"
+    />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    rel="stylesheet"
+  />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css@v1.7/symbiosis.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../css/estilo.css" />
+  <link rel="shortcut icon" href="../iconos/logo.png" type="image/x-icon" />
+  <title>Oishii Ramen</title>
+</head>
+<body>
+  <script>
+    const selectedTheme = localStorage.getItem('theme')
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove']("oscuro")
+       </script>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top header__nav" id="navbar">
+      <a href="../index.html" name="inicio" class="header__nav__inicio navbar-brand"></a>
+      <button class="hamburger hamburger--spin navbtn" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <div class="uldiv">
+                  <ul class="header__nav__list">
+                    <li class="header__nav__list__item">
+                      <a href="../index.html" class="pagina"
+                        >Inicio <i class="fa-solid fa-house"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/menu.html" class="pagina"
+                        >Menú <i class="fa-solid fa-utensils"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/ubicacion.html" class="pagina"
+                        >Ubicación <i class="fa-solid fa-map-location-dot"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/nosotros.html" class="pagina"
+                        >Nosotros <i class="fa-solid fa-people-group"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/unite.html" class="pagina"
+                        >Sumate! <i class="fa-solid fa-handshake-simple"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <div class="toggle-btn btn-toggle" id="_1st-toggle-btn">
+                        <input id="mode" type="checkbox" onclick="cambiarModo()">
+                        <span></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </header>
+    <main>
+      <h1 class="container__menu__titulo">Menú</h1>
+        <div class="menu__icono__div">
+           <img src="../iconos/onigirii.png" alt="entradas" class="menu__icono"></img>
+        </div>
+        <h2 class="menu__h2">Entradas</h2>
+        <div id="carouselExampleControls" class="carousel slide carro carro2" data-bs-ride="carousel">
+          <div class="carousel-inner d-flex">
+            <div class="carousel-item active menu2">
+              <article class="menu__platos">
+            <div class="menu__text">
+              <div class="divtext">
+          <h4 class="menu__h4"><i class="fa-solid fa-leaf"></i>Onigiri de hongos</h4>
+          <p class="menu__p">Bolas de arroz rellenas de hongos, ajo y verdeo, decoradas con sésamo negro y alga nori</p></div>
+         <div class="precio">
+          <h6 class="preciomalo"><del> $ 899 </del></h6>
+          <h3 class="preciobueno"> $ 699 </h3>
+         </div>
+        </div>
+        <img class="menu__img" src="../imagenes/onigiri.jpg" alt="onigiri">
+    </article>
+            </div>
+            <div class="carousel-item menu2">
+              <article class="menu__platos">
+                <div class="menu__text">
+                  <div class="divtext">
+                <h4 class="menu__h4">Gyozas de cerdo</h4>
+                <p class="menu__p">Empanadas al vapor rellenas de cerdo, repollo, jengibre y ajo, acompañadas de su salsa, vinagre de arroz, aceite de sésamo y salsa de soja</p></div>
+                <div class="precio">
+                  <h6 class="preciomalo pm"><del>0</del></h6>
+                  <h3 class="preciobueno"> $ 599 </h3>
+                 </div>
+                </div>
+                <img class="menu__img" src="../imagenes/gyozas.jpg" alt="gyozas">
+              </article>
+            </div>
+            <div class="carousel-item menu2">
+              <article class="menu__platos">
+                <div class="menu__text">
+                  <div class="divtext">
+                <h4 class="menu__h4">Tempura</h4>
+                <p class="menu__p">Langostinos y verduras con un rebozado muy fino y crujiente, fritos y acompañados por salsa tonkatsu</p></div>
+                <div class="precio">
+                  <h6 class="preciomalo pm"><del>0</del></h6>
+                  <h3 class="preciobueno"> $ 799 </h3>
+                 </div>
+                </div>
+                <img class="menu__img" src="../imagenes/tempura.jpg" alt="tempura">
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <article class="menu__platos" data-aos="fade-up"
+          data-aos-duration="2000">
+            <div class="menu__text">
+              <div class="divtext">
+          <h4 class="menu__h4"><i class="fa-solid fa-leaf"></i>Onigiri de hongos</h4>
+          <p class="menu__p">Bolas de arroz rellenas de hongos, ajo y verdeo, decoradas con sésamo negro y alga nori</p></div>
+          <div class="precio">
+            <h6 class="preciomalo"><del> $ 899 </del></h6>
+            <h3 class="preciobueno"> $ 699 </h3>
+           </div> </div>
+        <img class="menu__img" src="../imagenes/onigiri.jpg" alt="onigiri">
+    </article>
+        <article class="menu__platos" data-aos="fade-up"
+        data-aos-duration="2500">
+          <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4">Gyozas de cerdo</h4>
+          <p class="menu__p">Empanadas al vapor rellenas de cerdo, repollo, jengibre y ajo, acompañadas de su salsa, vinagre de arroz, aceite de sésamo y salsa de soja</p></div>
+          <div class="precio">
+            <h6 class="preciomalo pm"><del>0</del></h6>
+            <h3 class="preciobueno"> $ 599 </h3>
+           </div></div>
+          <img class="menu__img" src="../imagenes/gyozas.jpg" alt="gyozas">
+        </article>
+        <article class="menu__platos" data-aos="fade-up"
+        data-aos-duration="3000">
+        <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4">Tempura</h4>
+          <p class="menu__p">Langostinos y verduras con un rebozado muy fino y crujiente, fritos y acompañados por salsa tonkatsu</p></div>
+          <div class="precio">
+            <h6 class="preciomalo pm"><del>0</del></h6>
+            <h3 class="preciobueno"> $ 799</h3>
+           </div>
+           </div>
+          <img class="menu__img" src="../imagenes/tempura.jpg" alt="tempura">
+        </article>
+        </div>
+        <div class="menu__icono__div">
+        <img src="../iconos/chinese-food.png" class="menu__icono" alt="ramen"></img></div>
+        <h2 class="menu__h2">Ramen</h2>
+        <div id="carouselExampleControls2" class="carousel slide carro carro2" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active menu2">
+              <article class="menu__platos">
+                <div class="menu__text">
+                  <div class="divtext">
+                <h4 class="menu__h4">Spike Miso</h4>
+                <p class="menu__p">Fideos en caldo de verduras y hongos, base de Miso, carne salteada en salsa de soja, pak choi y aceite rayu de chilli</p></div>
+                <div class="precio">
+                  <h6 class="preciomalo"><del> $ 1799 </del></h6>
+                  <h3 class="preciobueno"> $ 1599 </h3>
+                 </div></div>
+                <img class="menu__img" src="../imagenes/spike.jpg" alt="ramen spike">
+              </article>
+            </div>
+            <div class="carousel-item menu2">
+              <article class="menu__platos">
+                <div class="menu__text">
+                  <div class="divtext">
+                <h4 class="menu__h4">Jet Black Garlic</h4>
+                <p class="menu__p">Fideos en caldo de cerdo y pollo, base de Shoyu, panceta de cerdo marinada, huevo ajitama y aceite de ajo negro</p></div>
+                <div class="precio">
+                  <h6 class="preciomalo"><del> $ 1899 </del></h6>
+                  <h3 class="preciobueno"> $ 1699 </h3>
+                 </div></div>
+                <img class="menu__img" src="../imagenes/jet-black.jpg" alt="ramen jet black">
+              </article>
+            </div>
+            <div class="carousel-item menu2">
+              <article class="menu__platos">
+                <div class="menu__text">
+                  <div class="divtext">
+                <h4 class="menu__h4"><i class="fa-solid fa-leaf"></i>Faye Kinoko</h4>
+                <p class="menu__p">Fideos en caldo de verduras y hongos, base de Shio, tofu salteado, granos de choclo y aceite de verdeo y ajo</p></div>
+                <div class="precio">
+                  <h6 class="preciomalo pm"><del>0</del></h6>
+                  <h3 class="preciobueno"> $ 1499 </h3>
+                 </div></div>
+                <img class="menu__img" src="../imagenes/faye.jpg" alt="ramen faye">
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+        <article class="menu__platos" data-aos="fade-up"
+        data-aos-duration="2000">
+          <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4">Spike Miso</h4>
+          <p class="menu__p">Fideos en caldo de verduras y hongos, base de Miso, carne salteada en salsa de soja, pak choi y aceite rayu de chilli</p></div>
+          <div class="precio">
+            <h6 class="preciomalo"><del> $ 1799 </del></h6>
+            <h3 class="preciobueno"> $ 1599 </h3>
+           </div></div>
+          <img class="menu__img" src="../imagenes/spike.jpg" alt="ramen spike">
+        </article>
+        <article class="menu__platos" data-aos="fade-up"
+        data-aos-duration="2500">
+          <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4">Jet Black Garlic</h4>
+          <p class="menu__p">Fideos en caldo de cerdo y pollo, base de Shoyu, panceta de cerdo marinada, huevo ajitama y aceite de ajo negro</p></div>
+          <div class="precio">
+            <h6 class="preciomalo"><del> $ 1899 </del></h6>
+            <h3 class="preciobueno"> $ 1699 </h3>
+           </div></div>
+          <img class="menu__img" src="../imagenes/jet-black.jpg" alt="ramen jet black">
+        </article>
+        <article class="menu__platos" data-aos="fade-up"
+        data-aos-duration="3000">
+          <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4"><i class="fa-solid fa-leaf"></i>Faye Kinoko</h4>
+          <p class="menu__p">Fideos en caldo de verduras y hongos, base de Shio, tofu salteado, granos de choclo y aceite de verdeo y ajo</p></div>
+          <div class="precio">
+            <h6 class="preciomalo pm"><del>0</del></h6>
+            <h3 class="preciobueno"> $ 1499 </h3>
+           </div>
+           </div>
+          <img class="menu__img" src="../imagenes/faye.jpg" alt="ramen faye">
+        </article>
+      </div>
+      <div class="menu__icono__div">
+      <img src="../iconos/rice.png" alt="arroz" class="menu__icono"></img></div>
+      <h2 class="menu__h2">Bowls</h2>
+      <div id="carouselExampleControls3" class="carousel slide carro carro2" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active menu2">
+            <article class="menu__platos">
+              <div class="menu__text">
+                <div class="divtext">
+              <h4 class="menu__h4">Pollo Teriyaki</h4>
+              <p class="menu__p">Pechuga de pollo salteada en salsa teriyaki, cuenta con Sake, Mirin y salsa de soja acompañado de verduras salteadas con arroz</p></div>
+              <div class="precio">
+                <h6 class="preciomalo pm"><del>0</del></h6>
+                <h3 class="preciobueno"> $ 1399 </h3>
+               </div></div>
+              <img class="menu__img" src="../imagenes/teriyaki.jpg" alt="pollo teriyaki">
+            </article>
+          </div>
+          <div class="carousel-item menu2">
+            <article class="menu__platos">
+          <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4">Arroz con Curry</h4>
+          <p class="menu__p">Mix de cerdo, pollo, papas, zanahorias y cebolla en salsa de curry casera acompañados de arroz blanco</p></div>
+          <div class="precio">
+            <h6 class="preciomalo pm"><del></del>0</h6>
+            <h3 class="preciobueno"> $ 1299 </h3>
+           </div></div>
+          <img class="menu__img" src="../imagenes/curry.jpg" alt="arroz con curry">
+        </article>
+          </div>
+          <div class="carousel-item menu2">
+            <article class="menu__platos">
+              <div class="menu__text">
+                <div class="divtext">
+              <h4 class="menu__h4"><i class="fa-solid fa-leaf"></i>Curry Veggie</h4>
+              <p class="menu__p">Mix de zanahoria, papa, cebolla, batata, hongos y garbanzos, en curry casero ligeramente picante, acompañado de arroz blanco</p></div>
+              <div class="precio">
+                <h6 class="preciomalo"><del> $ 1399 </del></h6>
+                <h3 class="preciobueno"> $ 1199 </h3>
+               </div></div>
+              <img class="menu__img" src="../imagenes/curryvegan.jpg" alt="curry vegetariano">
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <article class="menu__platos" data-aos="fade-up"
+        data-aos-duration="2000">
+          <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4">Pollo Teriyaki</h4>
+          <p class="menu__p">Pechuga de pollo salteada en salsa teriyaki, cuenta con Sake, Mirin y salsa de soja acompañado de verduras salteadas con arroz</p></div>
+          <div class="precio">
+            <h6 class="preciomalo pm"><del>0</del></h6>
+            <h3 class="preciobueno"> $ 1399 </h3>
+           </div></div>
+          <img class="menu__img" src="../imagenes/teriyaki.jpg" alt="pollo teriyaki">
+        </article>
+        <article class="menu__platos" data-aos="fade-up"
+        data-aos-duration="2500">
+          <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4">Arroz con Curry</h4>
+          <p class="menu__p">Mix de cerdo, pollo, papas, zanahorias y cebolla en salsa de curry casera acompañados de arroz blanco</p></div>
+          <div class="precio">
+            <h6 class="preciomalo pm"><del>0</del></h6>
+            <h3 class="preciobueno"> $ 1299 </h3>
+           </div></div>
+          <img class="menu__img" src="../imagenes/curry.jpg" alt="arroz con curry">
+        </article>
+        <article class="menu__platos" data-aos="fade-up"
+        data-aos-duration="3000">
+          <div class="menu__text">
+            <div class="divtext">
+          <h4 class="menu__h4"><i class="fa-solid fa-leaf"></i>Curry Veggie</h4>
+          <p class="menu__p">Mix de zanahoria, papa, cebolla, batata, hongos y garbanzos, en curry casero ligeramente picante, acompañado de arroz blanco</p></div>
+          <div class="precio">
+            <h6 class="preciomalo"><del> $ 1399 </del></h6>
+            <h3 class="preciobueno"> $ 1199 </h3>
+           </div></div>
+          <img class="menu__img" src="../imagenes/curryvegan.jpg" alt="curry vegetariano">
+        </article>
+      </div>
+      <div class="container__enlacefinal">
+        <a class="container__enlacefinal__a" href="https://www.pedidosya.com.ar/" target="_blank">Pedí acá!</a>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__copyright">
+        <p>© 2023 おいしい Oishii Ramen</p>
+      </div>
+      <div class="footer__social">
+        <a href="https://web.whatsapp.com/" name="whatsapp" target="_blank"
+          ><i class="fa-brands fa-whatsapp wpico"></i
+        ></a>
+        <a href="https://instagram.com/" name="instagram" target="_blank"
+          ><i class="fa-brands fa-instagram igico"></i></a>
+          <a href="https://facebook.com/" name="facebook" target="_blank"
+          ><i class="fa-brands fa-facebook-f fbico"></i></a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"
+      ></script>
+      <script src="../script/index.js"></script>
+  </body>
+  </html>

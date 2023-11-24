@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Santiago Gabriel Rossi" />
+    <meta
+      name="description"
+      content="Sumate a la familia Oishii, donde siempre hay lugar para alguien mas!"
+    />
+    <meta
+      name="keywords"
+      content="ramen, oishii, ramenshop, japon, comida japonesa, japanese food, onigiri, cocina, delivery, comida, buenos aires, gastronomia"
+    />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css@v1.7/symbiosis.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="shortcut icon" href="../iconos/logo.png" type="image/x-icon" />
+    <title>Oishii Ramen</title>
+  </head>
+  <body>
+    <script>
+      const selectedTheme = localStorage.getItem('theme')
+      document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove']("oscuro")
+         </script>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top header__nav" id="navbar">
+        <a
+          href="../index.html"
+          name="inicio"
+          class="header__nav__inicio navbar-brand"
+        ></a>
+        <button class="hamburger hamburger--spin navbtn" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <div class="uldiv">
+                  <ul class="header__nav__list">
+                    <li class="header__nav__list__item">
+                      <a href="../index.html" class="pagina"
+                        >Inicio <i class="fa-solid fa-house"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/menu.html" class="pagina"
+                        >Menú <i class="fa-solid fa-utensils"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/ubicacion.html" class="pagina"
+                        >Ubicación <i class="fa-solid fa-map-location-dot"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/nosotros.html" class="pagina"
+                        >Nosotros <i class="fa-solid fa-people-group"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <a href="../paginas/unite.html" class="pagina"
+                        >Sumate! <i class="fa-solid fa-handshake-simple"></i></a
+                      >
+                    </li>
+                    <li class="header__nav__list__item">
+                      <div class="toggle-btn btn-toggle" id="_1st-toggle-btn">
+                        <input id="mode" name="mode"type="checkbox" onclick="cambiarModo()">
+                        <span></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="sumate__div">
+        <div class="sumate">
+          <h2 class="sumate__h2" data-aos="zoom-in" data-aos-duration="2000">
+            No es fácil encontrar autentico Ramen y una buena oportunidad<br />Por
+            suerte en Oishii tenemos las dos.
+          </h2>
+        </div>
+      </div>
+      <div class="form">
+        <div class="form__p">
+          <img class="logo__form" src="../iconos/logo.png" alt="logo" />
+          <p>
+            Con la apertura de nuestro nuevo local estamos en búsqueda de
+            Ayudante de Cocina, Cocinero, Mozo y Delivery, escribinos!
+          </p>
+          <form>
+            <div class="form__grid">
+              <input
+                id="nombre"
+                name="name"
+                type="text"
+                class="feedback-input"
+                placeholder="Nombre"
+              />
+              <input
+                id="apellido"
+                name="last_name"
+                type="text"
+                class="feedback-input"
+                placeholder="Apellido"
+              />
+              <input
+                id="fecha"
+                name="birth_date"
+                type="text"
+                class="feedback-input"
+                placeholder="Fecha de nacimiento"
+                onfocus="(this.type='date')"
+                onblur="(this.type='text')"
+              />
+              <select     id="pronombre"
+              name="pronombre" class="feedback-input" >
+                <option value="" aria-label="puesto" disabled selected>
+                  Pronombres
+                </option>
+                <option value="0">Él</option>
+                <option value="1">Ella</option>
+                <option value="2">Elle</option>
+                <option value="3">Otr@</option>
+              </select>
+    
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="feedback-input"
+                placeholder="Email"
+              />
+              <input
+                id="celu"
+                name="celular"
+                type="number"
+                class="feedback-input"
+                placeholder="Telefono"
+              />
+              <textarea
+                id="textarea"
+                name="text"
+                class="feedback-text"
+                placeholder="Contanos de vos"
+              ></textarea>
+              <div id="cv">
+                <input type="file" id="file-upload" />
+                <label for="file-upload">Adjunta tu CV</label>
+              </div>
+              <select id="puesto" class="feedback-input" name="puesto">
+                <option value="" aria-label="puesto" disabled selected>
+                  Puesto deseado
+                </option>
+                <option value="0">Ayudante de cocina</option>
+                <option value="1">Cocinero</option>
+                <option value="2">Mozo</option>
+                <option value="3">Delivery</option>
+              </select>
+            </div>
+            <input id="enviar" class="enviar" type="submit" value="Enviar" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__copyright">
+        <p>© 2023 おいしい Oishii Ramen</p>
+      </div>
+      <div class="footer__social">
+        <a href="https://web.whatsapp.com/" name="whatsapp" target="_blank"
+          ><i class="fa-brands fa-whatsapp wpico"></i
+        ></a>
+        <a href="https://instagram.com/" name="instagram" target="_blank"
+          ><i class="fa-brands fa-instagram igico"></i></a>
+          <a href="https://facebook.com/" name="facebook" target="_blank"
+          ><i class="fa-brands fa-facebook-f fbico"></i></a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script/index.js"></script>
+  </body>
+</html>
